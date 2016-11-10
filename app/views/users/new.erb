@@ -1,0 +1,31 @@
+<h1>Create a new account</h1>
+<% if @user.errors.any? %>
+  <section class="errors">
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+
+<form class='form-style-4' action="/users" method="post">
+  <p>
+    <label name="username">Username</label>
+    <input name="user[username]" type="text" />
+  </p>
+
+  <p>
+    <label name="email">Email</label>
+    <input name="user[email]" type="email" />
+  </p>
+
+  <p>
+    <label name="pasword">Password</label>
+    <input name="user[password]" type="password" />
+  </p>
+
+  <p>
+    <input type="submit" />
+  </p>
+</form>

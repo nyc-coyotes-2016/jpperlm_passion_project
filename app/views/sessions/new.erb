@@ -1,0 +1,22 @@
+<h1>Login</h1>
+<% if @errors %>
+  <section class="errors">
+    <p><%= @errors %></p>
+  </section>
+<% end %>
+
+<form action="/sessions" method="post">
+  <p>
+    <label name="email">Email</label>
+    <input name="email" type="text" />
+  </p>
+
+  <p>
+    <label name="pasword">Password</label>
+    <input name="password" type="password" />
+  </p>
+
+  <p>
+    <input type="submit" />
+  </p>
+</form>
