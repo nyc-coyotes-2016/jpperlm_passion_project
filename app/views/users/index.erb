@@ -1,8 +1,26 @@
-<img src="<%=@picture.url%>" alt="Image" height="20%" width="20%">
+<div class='center'>
+<h1 id='titlepage' class='rainbow'> RESULTS </h1>
+</div>
+<div class='center'>
 
-<h2> This picture is full of : <%=@picture.highest_emotion %></h2>
+<img class='imgcenter' src="<%=@picture.url%>" alt="Image" height="80%" width="80%">
+<h1> This picture is full of : <%=@picture.highest_emotion %></h1>
+  <ul>
+    <li>ANGER: <%=@picture.anger * 100 %></li>
+    <li>CONTEMPT: <%=@picture.contempt * 100 %></li>
+    <li>Disgust: <%=@picture.disgust * 100 %></li>
+    <li>FEAR: <%=@picture.fear * 100 %></li>
+    <li>HAPPINESS: <%=@picture.happiness * 100 %></li>
+    <li>NEUTRAL: <%=@picture.neutral * 100 %></li>
+    <li>SADNESS: <%=@picture.sadness * 100 %></li>
+    <li>SURPRISE: <%=@picture.surprise * 100 %></li>
 
 
+  </ul>
+
+
+
+<h2> This text is rated <%=@picture.score %> which is <%=@picture.text_feeling%> </h2>
 <p> <%= @picture.text.split('=')[1].split("+").join(" ") %> </p>
 
-<h2> This text is <%=@picture.text_feeling %> </h2>
+</div>

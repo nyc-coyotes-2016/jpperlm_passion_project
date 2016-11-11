@@ -1,6 +1,7 @@
 $(function() {
   $('#picture-form').on('submit', function(event){
     event.preventDefault();
+    var that = this;
 
     var url = $(this).find('input.url').val()
       $.ajax({
@@ -27,7 +28,7 @@ $(function() {
             method: 'post',
             data: object
             }).done(function(response){
-              console.log('PICTURE DATA SAVED');
+              $(that).hide()
             });
           })
           // create object that holds link to picture and all the scores
@@ -38,6 +39,7 @@ $(function() {
 
       $('#text-form').on('submit', function(event){
         event.preventDefault();
+        var that = this;
         var text= $(this).find('textarea').val()
         var params ={
           "documents": [
@@ -69,6 +71,7 @@ $(function() {
               type:'post',
               data: data
               }).done(function(response){
+                $(that).hide();
                 console.log('TEXT DATA SAVED');
               });
             })

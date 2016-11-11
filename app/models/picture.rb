@@ -5,24 +5,8 @@ class Picture < ActiveRecord::Base
   def highest_emotion
     temp_array = [self.anger, self.contempt, self.disgust,self.fear,self.happiness,self.neutral,self.sadness, self.surprise]
     index = temp_array.rindex(temp_array.max)
-    case index
-      when 0
-        return "Anger"
-      when 1
-        return "Contemp"
-      when 2
-        return "Disgust"
-      when 3
-        return "Fear"
-      when 4
-        return "Happiness"
-      when 5
-        return "Neutral"
-      when 6
-        return "Sadness"
-      when 7
-        return "Surprise"
-      end
+    arrrr = ["Anger","Contempt","Disgust","Fear","Happiness","Neutral", "Sadness", "Surprise"]
+    return arrrr[index]
   end
   def text_feeling
 

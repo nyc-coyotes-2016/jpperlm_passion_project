@@ -9,7 +9,6 @@ post '/pictures' do
 end
 
 post '/texts' do
-
   @picture = Picture.find_by(user: current_user)
   if @picture
     @picture.update(@params)

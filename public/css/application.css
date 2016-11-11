@@ -1,3 +1,11 @@
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.img {
+  float:left;
+}
 body{
   background-color: #495C70;
 }
@@ -7,6 +15,11 @@ body{
     padding: 0;
     overflow: hidden;
     background-color: #333;
+}
+.imgcenter{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #review{
   float:right;
@@ -19,12 +32,19 @@ body{
 .listitem {
   float: left;
 }
-
+.headertxt{
+  text-align: center;
+}
 #restform{
   clear:both;
 }
-.coolbutton {
+#titlepage{
+  font-size: 5em;
+  text-align: center;
 
+}
+.coolbutton {
+  float:right;
 	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
 	box-shadow:inset 0px 1px 0px 0px #fff6af;
