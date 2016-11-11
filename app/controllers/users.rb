@@ -3,6 +3,11 @@ get '/users/new' do
   erb :'/users/new'
 end
 
+get '/users/:id' do
+  @picture = Picture.find_by(user: current_user)
+  erb :'/users/index'
+end
+
 get '/users' do
   erb :'/users/index'
 end
