@@ -1,7 +1,10 @@
-<img class='img' src="<%=@picture.url%>" alt="Image" height="20%" width="20%">
+<div class='center'>
+<h1 id='titlepage' class='rainbow'> RESULTS </h1>
+</div>
 <div class='center'>
 
-<h2> This picture is full of : <%=@picture.highest_emotion %></h2>
+<img class='imgcenter' src="<%=@picture.url%>" alt="Image" height="80%" width="80%">
+<h1> This picture is full of : <%=@picture.highest_emotion %></h1>
   <ul>
     <li>ANGER: <%=@picture.anger * 100 %></li>
     <li>CONTEMPT: <%=@picture.contempt * 100 %></li>

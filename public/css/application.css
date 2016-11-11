@@ -1,7 +1,6 @@
 .center {
     margin: auto;
     width: 50%;
-    border: 3px solid black;
     padding: 10px;
 }
 .img {
@@ -17,6 +16,11 @@ body{
     overflow: hidden;
     background-color: #333;
 }
+.imgcenter{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #review{
   float:right;
 }
@@ -28,9 +32,16 @@ body{
 .listitem {
   float: left;
 }
-
+.headertxt{
+  text-align: center;
+}
 #restform{
   clear:both;
+}
+#titlepage{
+  font-size: 5em;
+  text-align: center;
+
 }
 .coolbutton {
   float:right;

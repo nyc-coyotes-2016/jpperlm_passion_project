@@ -1,17 +1,19 @@
 <div class='center'>
 <% if logged_in? %>
+<h1 class='headertxt'> Enter a link to an image as well as a brief description of the person in the image </h1>
+<br>
 <form id='picture-form' METHOD="POST" ACTION="/">
-  <INPUT class='url' name='url' type='text' placeholder='URL'>
+  <INPUT size='30' class='url' name='url' type='text' placeholder='URL'>
   <INPUT class = 'coolbutton' TYPE="submit" VALUE="Add Your Picture">
 </form>
 
 <br><br>
 <form id='text-form' METHOD="POST" ACTION="/">
-  <textarea rows='10' cols='20' name="text">Enter Description</textarea>
+  <textarea rows='10' cols='30' name="text">Enter Description</textarea>
   <INPUT class = 'coolbutton' TYPE="submit" VALUE="Add Your Text">
 </form>
 
 <h1>
-<a href="/users/<%=current_user.id%>">YOUR RESULTS</a></h1>
+<a class='rainbow' href="/users/<%=current_user.id%>">YOUR RESULTS</a></h1>
 <% end %>
 </div>
