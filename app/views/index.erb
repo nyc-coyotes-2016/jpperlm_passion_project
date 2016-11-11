@@ -1,4 +1,15 @@
+<% if logged_in? %>
 <form id='picture-form' METHOD="POST" ACTION="/">
-  <INPUT name='source' type='text' placeholder='URL'>
-  <INPUT class = 'coolbutton' TYPE="submit" VALUE="Add a restaurant">
+  <INPUT class='url' name='url' type='text' placeholder='URL'>
+  <INPUT class = 'coolbutton' TYPE="submit" VALUE="Add Your Picture">
 </form>
+
+<br><br>
+<form id='text-form' METHOD="POST" ACTION="/">
+  <textarea rows='10' cols='20' name="text">Enter Description</textarea>
+  <INPUT class = 'coolbutton' TYPE="submit" VALUE="Add Your Text">
+</form>
+
+<h1>
+<a href="/users/<%=current_user.id%>">YOUR RESULTS</a></h1>
+<% end %>
