@@ -1,3 +1,4 @@
+<div class='center'>
 <% if logged_in? %>
 <form id='picture-form' METHOD="POST" ACTION="/">
   <INPUT class='url' name='url' type='text' placeholder='URL'>
@@ -13,3 +14,4 @@
 <h1>
 <a href="/users/<%=current_user.id%>">YOUR RESULTS</a></h1>
 <% end %>
+</div>
